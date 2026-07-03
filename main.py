@@ -6,7 +6,8 @@ numstudents= int(input("How many students do you have?: "))
 numsubjects =int(input("How many subjects do they study?"))
 
 names = ["" for _ in range(numstudents)]
-grades =  [[0 for _ in range(numstudents)] for _ in range(numsubjects + 1)]
+grades = [[0 for _ in range(numsubjects + 1)]
+          for _ in range(numstudents)]
 # initializing names list and grades 2d arrays AND made room for the average grades
 finalgrade = ["" for _ in range(numstudents)]
 #initializing separate array for final grade
@@ -17,7 +18,7 @@ for studentcount in range(numstudents):
         print("Enter marks for subject",subjectcount,":")
         studentgrade = int(input())
         grades[studentcount][subjectcount] = studentgrade 
-        total = total + studentgrade      
+        total += studentgrade      
     averagegrade = int(round((total / numsubjects),0))
     #made average grade calculator 
     names[studentcount] = name
@@ -32,6 +33,13 @@ for studentcount in range(numstudents):
         print("This student has underperformed, requires more help")
         finalgrade[studentcount] =  str("UNDERPERFORMING")
     #Grade assigning system
+
+for namedisplay in range(numstudents):
+    print(names[namedisplay])
+
+
+
+    
 
 
 
