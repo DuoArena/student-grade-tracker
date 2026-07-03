@@ -32,10 +32,8 @@ for studentcount in range(numstudents):
     else:
         print("This student has underperformed, requires more help")
         finalgrade[studentcount] =  str("UNDERPERFORMING")
-    #Grade assigning system
+    #Implement grade assignment based on average
 
-for namedisplay in range(numstudents):
-    print(names[namedisplay])
 
 
 
